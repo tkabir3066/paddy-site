@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Peddy</title>
 
     <!-- Daisy UI -->
@@ -25,10 +25,232 @@
         font-family: "Lato", serif;
       }
     </style>
-</head>
-<body>
-    
+  </head>
+  <body class="lato-font">
+    <!--^ HEADER -->
+    <header class="fixed top-0 left-0 w-full z-20">
+        <!--* NAVBAR -->
+        <nav class="max-w-screen-xl mx-auto mb-14">
+          <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="flex items-center gap-2">
+                <div>
+                  <img src="images/logo.webp" alt="" />
+                </div>
+                <h2 class="font-extrabold text-3xl">Peddy</h2>
+              </div>
+            </div>
+            <div class="navbar-center hidden md:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <img
+                class="w-8 h-8 object-cover cursor-pointer"
+                src="https://img.icons8.com/?size=256w&id=22396&format=png"
+                alt=""
+              />
+            </div>
+          </div>
+        </nav>
+      </header>
+    <!--^ MAIN -->
+    <main class="my-28 max-w-screen-xl mx-auto">
+    <!--? HERO PAGE -->
+      <section class="mb-20">
+        <div class="hero">
+          <div class="hero-content text-center">
+            <div class="md:w-1/2">
+              <h1 class="text-2xl font-bold text-gray-500 mb-6">
+                Bringing Families Together ❤️‍🔥
+              </h1>
+              <h1 class="text-5xl font-bold">
+                Your Path to Adoption Starts Here
+              </h1>
+              <p class="py-6">
+                Discover your perfect companion and give a loving home to a pet
+                in need. Start your journey of unconditional love and joy today!
+              </p>
+              <button class="btn deep-green font-bold text-xl text-white mb-11">
+                View More
+              </button>
+              <div>
+                <img src="images/pet.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!--? CATEGORY SECTION -->
+      <section class="mb-7">
+        <div class="lg:w-5/12 w-4/5 mx-auto text-center mb-8">
+          <h1 class="font-bold text-4xl mb-6">Adopt Your Best Friend</h1>
+          <p>
+            Bring endless love, joy, and companionship into your life by
+            adopting a loyal friend. Find your perfect match and give a pet the
+            forever home they deserve!
+          </p>
+        </div>
+        <div
+          id="category-container"
+          class="grid md:grid-cols-2 lg:grid-cols-4 gap-2"
+        ></div>
+      </section>
+      <!--? SORT SECTION -->
+      <section>
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <a class="text-2xl font-bold">Best Deals For you</a>
+          </div>
+          <div class="flex-none">
+            <button id="sortBTN" class="btn bg-teal-700 font-bold text-white">
+              Sort by Price
+            </button>
+          </div>
+        </div>
+      </section>
+      <!--? PETS SECTION -->
+      <section>
+        <div class="flex flex-col md:flex-row gap-2">
+          <div
+            id="pets-container"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 w-5/6 mx-auto"
+          ></div>
+          <div
+            id="like-container"
+            class="border border-teal-100 hover:border-teal-400 md:w-5/12 h-fit rounded-lg grid grid-cols-2 p-3 gap-1 text-teal-100 hover:text-teal-400"
+          >
+            <h4 id="path" class="">Press the heart icon to add images.</h4>
+          </div>
+        </div>
+      </section>
+      <!--? MODAL SECTION -->
+      <section>
+        <button
+          id="showModal"
+          class="btn hidden"
+          onclick="my_modal_5.showModal()"
+        >
+          open modal
+        </button>
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box border border-teal-500">
+            <div id="modalcontent"></div>
+            <div class="modal-action">
+              <form method="dialog" class="w-full">
+                <button
+                  class="btn w-full border-teal-100 hover:bg-white hover:border-teal-500 text-teal-700"
+                >
+                  Close
+                </button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
+      <!--? MODAL CONGRATES SECTION -->
+      <section>
+        <!-- Open the modal using ID.showModal() method -->
+        <button
+          id="congratesModal"
+          class="btn hidden"
+          onclick="my_modal_1.showModal()"
+        >
+          open modal
+        </button>
+        <dialog id="my_modal_1" class="modal">
+          <div
+            class="modal-box text-center border border-teal-500"
+            id="modal-content"
+          >
+            <div class="flex justify-center mb-6">
+              <img
+                class="w-1/2"
+                src="https://cdn-icons-png.flaticon.com/512/1807/1807570.png"
+                alt=""
+              />
+            </div>
+            <h1 class="font-extrabold text-3xl mb-2">Congrates</h1>
+            <p class="font-semibold mb-3">Adoption Process is Start For You</p>
+            <div id="countdown"></div>
+            <div class="modal-action">
+              <form method="dialog">
+                <button class="btn hidden">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
+    </main>
 
+    <footer class="bg-black">
+        <section
+          class="footer text-white p-10 justify-between max-w-screen-xl mx-auto pb-28"
+        >
+          <nav>
+            <div class="flex items-center gap-2 mb-2">
+              <div>
+                <img src="images/logo.webp" alt="" />
+              </div>
+              <h2 class="font-extrabold text-3xl">Peddy</h2>
+            </div>
+            <a class="link link-hover text-gray-300 font-light"
+              >Location: av. Washington 165, NY CA 54003</a
+            >
+            <a class="link link-hover text-gray-300 font-light"
+              >Phone: +31 85 964 47 25</a
+            >
+            <a class="link link-hover text-gray-300 font-light"
+              >Email: info@yourdomain.com</a
+            >
+            <a class="link link-hover text-gray-300 font-light"
+              >Openings hours: 9.00 AM - 5.00 PM</a
+            >
+            <div class="flex gap-2 mt-2 items-center">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"
+                class="w-8 h-8"
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png"
+                class="w-8 h-8"
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+                class="w-8 h-8"
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
+                class="w-8 h-8"
+              />
+            </div>
+          </nav>
+          <nav>
+            <h6 class="font-bold text-white">Useful Links</h6>
+            <a class="link link-hover text-gray-300 font-light">Home</a>
+            <a class="link link-hover text-gray-300 font-light">About Us</a>
+            <a class="link link-hover text-gray-300 font-light">Animals</a>
+            <a class="link link-hover text-gray-300 font-light">Foundation</a>
+            <a class="link link-hover text-gray-300 font-light">Contact</a>
+          </nav>
+          <nav>
+            <h6 class="font-bold text-white">Drop a Message</h6>
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              class="input input-bordered w-full bg-gray-600"
+            />
+            <button
+              class="btn w-full bg-teal-600 border-teal-500 hover:bg-teal-300 text-white"
+            >
+              Subscribe
+            </button>
+          </nav>
+        </section>
+      </footer>
     <script src="js/pet.js"></script>
-</body>
+  </body>
 </html>
