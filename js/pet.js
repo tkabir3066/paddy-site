@@ -249,5 +249,15 @@ const displayCongratesModal = (details) => {
   }, 3000);
 };
 
+//*Sort Pets by Price (High to Low)
+const sortPrice = (pets) => {
+  pets.forEach((pet) => {
+    console.log(pet.price);
+  });
+  const sortedPets = pets.sort((a, b) => b.price - a.price);
+  console.log(sortedPets);
+  displayPets(sortedPets);
+};
+
 loadCategory();
 loadPets();
